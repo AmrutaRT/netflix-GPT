@@ -105,3 +105,19 @@ Also added this in content of tailwind config file.
 3. Netflix gpt
     --search bar
     --movie suggestions
+4. Redux store 
+    -- manage states in a store with data.
+    --npm i -D @reduxjs/toolkit
+    --npm i react-redux
+    -- create a file as appStore.js
+    which will be from configureStore as 
+        import { configureStore } from "@reduxjs/toolkit";
+        const appStore=configureStore(
+        {
+        reducer:{}})//this will have different reducers for different slices.
+    --create userSlice.js
+        --add reducer with name and initialState
+        inside recuer add actions addUser and removeUser. export these actions and reducer.
+    -- add userReducer to appStore.
+    -- provide this appStore to main app.js using Provider
+    -- dispatch add and remove user actions using firebase's utility method onAuthStateChange.(signin/signout)
